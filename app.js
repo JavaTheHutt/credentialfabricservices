@@ -10,8 +10,10 @@ const bodyParser = require('body-parser');
 
 const sessions = require('./routes/sessions');
 const users = require('./routes/users');
-
+const cors = require('cors');
 const app = express();
+
+app.use(cors());
 
 app.use(logger('dev'));
 app.use(bodyParser.json());

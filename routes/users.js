@@ -50,7 +50,7 @@ router.post('/', function (req, res, next) {
         if (!validEmailRE.test(req.body.email)
             || !req.body.firstName.trim().length
             || !req.body.lastName.trim().length
-            || !(['Member', 'Authority', 'Review'].includes(req.body.participantType))) {
+            || !(['Member', 'Authority', 'Reviewer'].includes(req.body.participantType))) {
             throw new Error('Incorrect input payload.');
         }
     } catch (e) {

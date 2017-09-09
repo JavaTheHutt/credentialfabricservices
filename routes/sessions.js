@@ -61,7 +61,7 @@ router.post('/', function (req, res, next) {
                 issuer: process.env.issuer_id
             });
             res.status(200);
-            res.json({token: token});
+            res.json({token: token, body: req.body });
         })
         .catch((e) => {
             e.status = 409;

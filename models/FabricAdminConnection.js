@@ -49,7 +49,9 @@ class FabricAdminConnection {
                     userSecret: newUserCred.userSecret,
                     email: email,
                     firstName: firstName,
-                    lastName: lastName
+                    lastName: lastName,
+                    participantType: participantType,
+                    businessNetwork: process.env.business_network
                 };
             })
             .catch((e) => {

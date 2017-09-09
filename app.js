@@ -13,6 +13,10 @@ const users = require('./routes/users');
 
 const app = express();
 
+if (process.env.NODE_ENV !== 'production') {
+    app.use(require('cors')());
+}
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
